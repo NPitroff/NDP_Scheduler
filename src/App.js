@@ -18,14 +18,9 @@ class App extends Component() {
     ]
   }
   render() {
-    let tasks_list = this.state.tasks.map(task => (
-      // use the key of a task title to iterate through the array of objects as they currently have no id
-      <p key = {task.title}>
-        {task.title} - {task.details}
-      </p>
-    ));
+
     return (
-      <div className="App"><TodayList tasks={this.state.tasks} /></div>
+      <TodayList tasks={this.state.tasks} />
     );
   }
 }
