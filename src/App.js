@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 
+// component
+import TodayList from "./Components/TodayList";
+
 class App extends Component() {
   state = {
     tasks: [
@@ -22,7 +25,7 @@ class App extends Component() {
       </p>
     ));
     return (
-      <div className="App">{tasks_list}</div>
+      <div className="App"><TodayList tasks={this.state.tasks} /></div>
     );
   }
 }
